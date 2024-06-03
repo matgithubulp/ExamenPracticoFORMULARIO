@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamenPractico</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+
+    <main class="contenedor">
+        <div class="formulario">
+            <h3>Reseñas de Peliculas</h3>
+            <form id="form-reseña" novalidate>
+                <label for="pelicula"> Pelicula </label>
+                <input type="text" id="pelicula" name="pelicula" maxlength="30" required>
+                <span id="errorPelicula" class="error">Ingrese un nombre valido (mximo 30 caracteres)</span><br>
+        
+                <label for="puntuacion">Puntuacion:</label>
+                <select id="puntuacion" name="puntuacion" required>
+                    <option value="">Seleccione una puntuacion</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span id="errorPuntuacion" class="error">Por favor seleccione una puntuacion</span><br>
+        
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario" maxlength="200"></textarea>
+                <span id="errorComentario" class="error">El comentario debe tener entre 10 y 200 caracteres</span><br>
+        
+                <button class="boton" type="button" onclick="validarFormulario()">Enviar</button>
+            </form>
+            <script src="script.js"></script>
+            <div class="reseñas" id="reseñas"></div>
+        </div>
+    </main>
+</body>
+
+
+
+
+
+</html>
